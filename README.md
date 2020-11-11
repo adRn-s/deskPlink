@@ -10,7 +10,7 @@ range of basic, large-scale analyses in a computationally efficient manner. For
 more information please refer to upstream
 [documentation](https://www.cog-genomics.org/plink).
 
-![](img/screen.jpg)
+![](img/screen.png)
 
 ## Installation
 
