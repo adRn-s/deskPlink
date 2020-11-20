@@ -190,7 +190,7 @@ server <- function(input, output) {
       if (!is.integer(input$workpath)) {
         wpath <- shinyFiles::parseDirPath(volumes, input$workpath)
         shiny::selectInput("result_file", "Choose result file:",
-            list.files(wpath, pattern =
+            list.files(file.path(wpath), pattern =
             "\\.(?:qassoc|assoc|model|linear|logistic|best|fisher|mperm)"),
           width = "100%")
     } else { return() }
