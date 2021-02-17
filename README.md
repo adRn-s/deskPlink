@@ -16,14 +16,15 @@ information please refer to upstream
 ## Installation
 
 ```{r}
-require(devtools)
+install.packages("remotes")
+library(remotes)
 install_github("adRn-s/deskPlink")
 ```
 
 ## Usage
 
 ```{r}
-require(deskPlink)
+library(deskPlink)
 run()
 ```
 
