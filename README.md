@@ -16,7 +16,7 @@ information please refer to upstream
 ## Installation
 
 ```{r}
-install.packages("remotes")
+# install.packages("remotes")
 library(remotes)
 install_github("adRn-s/deskPlink")
 ```
@@ -28,8 +28,21 @@ library(deskPlink)
 run()
 ```
 
-![](img/screen.png)
+#### RStudio + Bioconda Environment
 
+```{bash}
+conda create -n deskPlink r-remotes plink=1.90 r-DT r-shiny r-shinyFiles r-fs
+conda activate deskPlink
+R_LIBS_USER="$CONDA_PREFIX/lib/R/library"
+RSTUDIO_WHICH_R="$CONDA_PREFIX/bin/R"
+nohup /usr/bin/rstudio  # PATH depends on your OS.
+```
+
+By defining `R_LIBS_USER` and `RSTUDIO_WHICH_R` shell environmental variables RStudio will spawn the correct R session inside a Bioconda environment with managed dependencies. Proceed to **Installation** and **Usage** steps described above.
+
+## Screenshot
+
+![](img/screen.png)
 
 ## Development
 
